@@ -345,5 +345,59 @@
     ],
     "projectUrl": "https://www.gatech.edu",
     "guidelinesUrl": "https://www.gatech.edu"
+  },
+  {
+    "projectName": "Issue Test 3",
+    "projectAbstract": "Test 3",
+    "projectAreas": [
+      "AI"
+    ],
+    "licenses": [
+      "BSD-2-Clause"
+    ],
+    "contacts": [
+      {
+        "name": "Nate Kim",
+        "email": "nkim337@gatech.edu"
+      }
+    ],
+    "projectUrl": "https://www.gatech.edu",
+    "guidelinesUrl": "https://www.gatech.edu"
+  },
+  {
+    "projectName": "Issue Test 4",
+    "projectAbstract": "Test 4",
+    "projectAreas": [
+      "Bioscience"
+    ],
+    "licenses": [
+      "BSD-2-Clause"
+    ],
+    "contacts": [
+      {
+        "name": "Nate Kim",
+        "email": "nkim337@gatech.edu"
+      }
+    ],
+    "projectUrl": "https://www.gatech.edu",
+    "guidelinesUrl": "https://www.gatech.edu"
+  },
+  {
+    "projectName": "Issue Test 5",
+    "projectAbstract": "Test 5",
+    "projectAreas": [
+      "Bioscience"
+    ],
+    "licenses": [
+      "BSD-2-Clause"
+    ],
+    "contacts": [
+      {
+        "name": "Nate Kim",
+        "email": "nkim337@gatech.edu"
+      }
+    ],
+    "projectUrl": "https://www.gatech.edu",
+    "guidelinesUrl": "https://www.gatech.edu"
   }
 ]
