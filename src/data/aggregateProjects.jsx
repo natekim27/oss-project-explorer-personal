@@ -79,7 +79,7 @@ const aggregateSubmissions = async (octokit) => {
       console.error("Submissions folder does not exist. Skipping aggregation.");
       return;
     } else {
-      console.error("Error during aggregation:", error);
+      console.error("Unexpected error:", error.response?.data || error.message);
       throw error;
     }
   }
