@@ -74,6 +74,7 @@ const aggregateSubmissions = async (octokit) => {
   } catch (error) {
     if (error.status === 404) {
       console.error("Submissions folder does not exist. Skipping aggregation.");
+      return;
     } else {
       console.error("Error during aggregation:", error);
       throw error;
