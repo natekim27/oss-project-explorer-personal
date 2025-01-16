@@ -14,7 +14,7 @@ const aggregateSubmissions = async (octokit) => {
       path: submissionsPath,
     });
 
-    if (!Array.isArray(submissionsResponse.data) || submissionsResponse.data.length === 0) {
+    if (submissionsResponse.data.length === 0) {
       console.log("No new submission files found.");
       return;
     }
@@ -72,8 +72,12 @@ const aggregateSubmissions = async (octokit) => {
 
     console.log("Aggregation completed successfully.");
   } catch (error) {
-    console.error("Error during aggregation:", error);
-    // throw error;
+    if (error.status === 404) {
+      console.error("Submissions folder does not exist. Skipping aggregation.");
+    } else {
+      console.error("Error during aggregation:", error);
+      throw error;
+    }
   }
 };
 
