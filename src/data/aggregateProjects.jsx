@@ -8,11 +8,13 @@ const aggregateSubmissions = async (octokit) => {
 
   try {
     // Fetch the list of files in the submissions folder
+    console.log("hi1");
     const submissionsResponse = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
       owner,
       repo,
       path: submissionsPath,
     });
+    console.log("hi2");
 
     if (submissionsResponse.data.length === 0) {
       console.log("No new submission files found.");
@@ -25,6 +27,7 @@ const aggregateSubmissions = async (octokit) => {
       repo,
       path: projectListPath,
     });
+    console.log("hi3");
 
     const projectListContent = JSON.parse(Buffer.from(projectListResponse.data.content, 'base64').toString());
     const projectListSha = projectListResponse.data.sha;
