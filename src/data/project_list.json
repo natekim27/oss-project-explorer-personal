@@ -417,5 +417,41 @@
     ],
     "projectUrl": "https://www.gatech.edu",
     "guidelinesUrl": "https://www.gatech.edu"
+  },
+  {
+    "projectName": "Issue Test 7",
+    "projectAbstract": "test 7",
+    "projectAreas": [
+      "Graphics"
+    ],
+    "licenses": [
+      "BSD-2-Clause"
+    ],
+    "contacts": [
+      {
+        "name": "Nate Kim",
+        "email": "nkim337@gatech.edu"
+      }
+    ],
+    "projectUrl": "https://www.gatech.edu",
+    "guidelinesUrl": "https://www.gatech.edu"
+  },
+  {
+    "projectName": "Issue Test 8",
+    "projectAbstract": "test 8",
+    "projectAreas": [
+      "HPC"
+    ],
+    "licenses": [
+      "BSD-2-Clause"
+    ],
+    "contacts": [
+      {
+        "name": "Nate Kim",
+        "email": "nkim337@gatech.edu"
+      }
+    ],
+    "projectUrl": "https://www.gatech.edu",
+    "guidelinesUrl": "https://www.gatech.edu"
   }
 ]
