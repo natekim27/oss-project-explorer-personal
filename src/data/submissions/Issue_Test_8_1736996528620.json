@@ -1,0 +1,18 @@
+{
+  "projectName": "Issue Test 8",
+  "projectAbstract": "test 8",
+  "projectAreas": [
+    "HPC"
+  ],
+  "licenses": [
+    "BSD-2-Clause"
+  ],
+  "contacts": [
+    {
+      "name": "Nate Kim",
+      "email": "nkim337@gatech.edu"
+    }
+  ],
+  "projectUrl": "https://www.gatech.edu",
+  "guidelinesUrl": "https://www.gatech.edu"
+}
