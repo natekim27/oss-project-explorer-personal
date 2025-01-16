@@ -14,7 +14,7 @@ const aggregateSubmissions = async (octokit) => {
       path: submissionsPath,
     });
 
-    if (submissionsResponse.data.length === 0) {
+    if (!Array.isArray(submissionsResponse.data) || submissionsResponse.data.length === 0) {
       console.log("No new submission files found.");
       return;
     }
