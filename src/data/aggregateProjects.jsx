@@ -8,13 +8,11 @@ const aggregateSubmissions = async (octokit) => {
 
   try {
     // Fetch the list of files in the submissions folder
-    console.log("hi1");
     const submissionsResponse = await octokit.request('GET /repos/{owner}/{repo}/contents/{path}', {
       owner,
       repo,
       path: submissionsPath,
     });
-    console.log("hi2");
 
     if (submissionsResponse.data.length === 0) {
       console.log("No new submission files found.");
@@ -27,7 +25,6 @@ const aggregateSubmissions = async (octokit) => {
       repo,
       path: projectListPath,
     });
-    console.log("hi3");
 
     const projectListContent = JSON.parse(Buffer.from(projectListResponse.data.content, 'base64').toString());
     const projectListSha = projectListResponse.data.sha;
@@ -75,13 +72,8 @@ const aggregateSubmissions = async (octokit) => {
 
     console.log("Aggregation completed successfully.");
   } catch (error) {
-    if (error.status === 404) {
-      console.error("Submissions folder does not exist. Skipping aggregation.");
-      return;
-    } else {
-      console.error("Unexpected error:", error.response?.data || error.message);
-      throw error;
-    }
+    console.error("Unexpected error:", error.response?.data || error.message);
+    throw error;
   }
 };
 
@@ -95,7 +87,11 @@ const octokit = new Octokit({
   try {
     await aggregateSubmissions(octokit);
   } catch (error) {
-    console.error("Error during aggregation:", error);
-    process.exit(1); // Exit with a failure code for CI/CD
+    if (error.status === 404) {
+      console.error("Submissions folder does not exist. Skipping aggregation.");
+    } else {
+      console.error("Unexpected error during aggregation:", error);
+      process.exit(1); // Exit with a failure code for CI/CD
+    }
   }
 })();
