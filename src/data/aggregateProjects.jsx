@@ -73,7 +73,7 @@ const aggregateSubmissions = async (octokit) => {
     console.log("Aggregation completed successfully.");
   } catch (error) {
     console.error("Error during aggregation:", error);
-    throw error;
+    // throw error;
   }
 };
 
